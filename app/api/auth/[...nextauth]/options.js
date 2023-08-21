@@ -11,6 +11,7 @@ export const options = {
   adapter: SupabaseAdapter({
     url: process.env.NEXT_PUBLIC_SUPABASE_URL,
     secret: process.env.SUPABASE_SERVICE_ROLE_KEY,
+    storage: "supabase",
   }),
   callbacks: {
     async session({ session, user }) {
