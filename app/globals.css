@@ -221,6 +221,60 @@ ul {
   line-height: 1.75rem;
 }
 
+.modalTable {
+  display: table;
+  border-collapse: separate;
+  box-sizing: border-box;
+  text-indent: initial;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 12px;
+  border-spacing: 2px;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  background-color: transparent;
+}
+.modalTable > thead {
+  display: table-header-group;
+
+  background-color: #7b7b7b;
+  border-color: inherit;
+}
+.modalTable > tbody {
+  display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+
+.modalTable > tbody > tr {
+  font-family: OpenSans-Regular;
+  font-size: 15px;
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  font-weight: unset;
+}
+
+.modalTable > tbody > tr > td {
+  padding: 0.75rem;
+  margin: 0 auto;
+}
+.modalTable > tbody > tr > td {
+  padding: 0.75rem;
+  margin: 0 auto;
+}
+.modalTable > tbody > tr:nth-child(odd) {
+  background-color: transparent;
+}
+.modalTable > tbody > tr:nth-child(even) {
+  color: rgb(236, 236, 236);
+  background-color: rgb(95, 95, 95);
+}
+.modalTable > tbody > tr > td:last-child {
+  border-right: 0;
+  color: black;
+}
+
 /* CreateTable */
 
 .styledTable {
@@ -282,4 +336,10 @@ ul {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+}
+
+/* TABLEPAGE */
+
+.tablePage {
+  display: flex;
 }

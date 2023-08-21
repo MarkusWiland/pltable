@@ -36,7 +36,7 @@ export default function TableCard() {
             <Modal.Content title={contact.name}>
               <div className="mt-4 space-y-3 text-gray-600">
                 <p>Din tabell</p>
-                <table>
+                <table className="modalTable">
                   <thead>
                     <tr>
                       <th>Position</th>
