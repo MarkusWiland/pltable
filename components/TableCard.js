@@ -2,9 +2,10 @@
 
 import supabase from "@/utils/supabaseClient";
 import { useState, useEffect } from "react";
-import Modal from "./modal";
+import Modal from "./Modal";
 import { tabell } from "@/utils/data";
 import { getBackgroundColor } from "@/helpers/functions";
+import Image from "next/image";
 export default function TableCard() {
   const [users, setUsers] = useState([]);
   useEffect(() => {
@@ -48,7 +49,7 @@ export default function TableCard() {
                       <tr key={`row-${index}-${row?.selectedTeam?.id}`}>
                         <td>{index + 1}</td>
                         <td>
-                          <img
+                          <Image
                             src={row?.selectedTeam?.icon}
                             width="20px"
                             height="20px"
