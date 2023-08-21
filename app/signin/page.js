@@ -11,7 +11,7 @@ export default async function ServerPage() {
 
   return (
     <section className="flex flex-col gap-6">
-      <TableCard user={session?.user} pagetype={"Server"} />
+      <h1>signin</h1>
     </section>
   );
 }
