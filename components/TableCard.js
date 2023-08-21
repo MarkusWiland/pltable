@@ -22,7 +22,6 @@ export default function TableCard() {
     const points = Math.max(0, 3 - Math.abs(referenceRank - actualRank));
     return points;
   };
-  console.log("users", users);
   return (
     <div>
       <header className="flex items-center justify-between bg-blue-950 p-4">

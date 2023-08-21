@@ -1,14 +1,11 @@
-import GitHubProvider from "next-auth/providers/github";
-import CredentialsProvider from "next-auth/providers/credentials";
-import { redirect } from "next/dist/server/api-utils";
+import TwitterProvider from "next-auth/providers/twitter";
 import { SupabaseAdapter } from "@auth/supabase-adapter";
-import NextAuth from "next-auth";
-import jwt from "jsonwebtoken";
 export const options = {
   providers: [
-    GitHubProvider({
-      clientId: process.env.GITHUB_ID,
-      clientSecret: process.env.GITHUB_SECRET,
+    TwitterProvider({
+      clientId: process.env.TWITTER_CLIENT_ID,
+      clientSecret: process.env.TWITTER_CLIENT_SECRET,
+      version: "2.0",
     }),
   ],
   adapter: SupabaseAdapter({
