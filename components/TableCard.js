@@ -51,9 +51,9 @@ export default function TableCard() {
                         <td>
                           <Image
                             src={row?.selectedTeam?.icon}
-                            width="20px"
-                            height="20px"
-                            alt="team"
+                            width={20}
+                            height={20}
+                            alt={row?.selectedTeam?.value}
                           />
                         </td>
                         <td>{row?.selectedTeam?.value}</td>

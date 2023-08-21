@@ -11,18 +11,15 @@ export const options = {
   adapter: SupabaseAdapter({
     url: process.env.NEXT_PUBLIC_SUPABASE_URL,
     secret: process.env.SUPABASE_SERVICE_ROLE_KEY,
-    storage: "supabase",
+    persistSession: false,
   }),
   callbacks: {
     async session({ session, user }) {
       console.log("user", user);
       if (user) {
-        session.user.id = user.id;
-        session.user.name = user.name;
-        session.user.email = user.email;
-        session.user.image = user.image;
+        session.user = user;
       }
-      console.log("session", session);
+
       return session;
     },
     async redirect({ url, baseUrl }) {
